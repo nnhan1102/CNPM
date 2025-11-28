@@ -1,0 +1,437 @@
+<!-- <!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House - Thanh toán</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header text-center mb-4">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
+          alt="Coffee House"
+          class="logo mb-3"
+          width="80"
+        />
+        <h1 class="display-4">Coffee House</h1>
+        <p class="lead text-muted">Thức uống chất lượng - Hương vị tuyệt hảo</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="order-summary">
+            <h3><i class="fas fa-shopping-cart"></i> Đơn hàng của bạn</h3>
+            <div class="order-items">
+              <div class="order-item">
+                <div class="item-info">
+                  <h5>Espresso</h5>
+                  <p>Đậm đà, thơm ngon</p>
+                </div>
+                <div class="item-price">35,000 VND</div>
+              </div>
+              <div class="order-item">
+                <div class="item-info">
+                  <h5>Latte</h5>
+                  <p>Cà phê sữa Ý</p>
+                </div>
+                <div class="item-price">45,000 VND</div>
+              </div>
+              <div class="order-item">
+                <div class="item-info">
+                  <h5>Bánh Tiramisu</h5>
+                  <p>Ngọt ngào hương vị Ý</p>
+                </div>
+                <div class="item-price">55,000 VND</div>
+              </div>
+            </div>
+            <div class="order-total">
+              <div class="total-line">
+                <span>Tạm tính:</span>
+                <span>135,000 VND</span>
+              </div>
+              <div class="total-line">
+                <span>Giảm giá:</span>
+                <span>-10,000 VND</span>
+              </div>
+              <div class="total-line final">
+                <span><strong>Tổng cộng:</strong></span>
+                <span><strong>125,000 VND</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="payment-form">
+            <h3><i class="fas fa-credit-card"></i> Thông tin thanh toán</h3>
+            <form action="payment.php" method="post">
+              <div class="form-group">
+                <label for="amount">Số tiền (VND):</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="amount"
+                  name="amount"
+                  value="125000"
+                  required
+                  readonly
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">Mô tả đơn hàng:</label>
+                <textarea
+                  class="form-control"
+                  id="description"
+                  name="description"
+                  rows="3"
+                  required
+                >
+Đơn hàng Coffee House - 1 Espresso, 1 Latte, 1 Tiramisu</textarea
+                >
+              </div>
+
+              <div class="payment-methods">
+                <h6>Chọn phương thức thanh toán:</h6>
+                <div class="method-option active" data-method="zalopay">
+                  <img
+                    src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay.png"
+                    alt="ZaloPay"
+                    width="60"
+                  />
+                  <span>ZaloPay</span>
+                  <i class="fas fa-check"></i>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block mt-4">
+                <i class="fas fa-lock"></i> Thanh toán ngay
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="features mt-5">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <i class="fas fa-shipping-fast"></i>
+            <h5>Giao hàng nhanh</h5>
+            <p>Miễn phí trong 30 phút</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-coffee"></i>
+            <h5>Chất lượng tốt nhất</h5>
+            <p>Hạt cà phê rang mới</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-headset"></i>
+            <h5>Hỗ trợ 24/7</h5>
+            <p>Hotline: 1900 1234</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simple method selection
+      document.querySelectorAll(".method-option").forEach((option) => {
+        option.addEventListener("click", function () {
+          document.querySelectorAll(".method-option").forEach((opt) => {
+            opt.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House - Thức uống tuyệt hảo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
+            alt="Coffee House"
+            width="40"
+          />
+          Coffee House
+        </a>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link cart-icon" href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Thức uống chất lượng</h1>
+          <p>Hương vị tuyệt hảo - Phục vụ tận tâm</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+      <div class="container">
+        <h2 class="section-title">Menu Đồ Uống</h2>
+
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">Tất cả</button>
+          <button class="filter-btn" data-category="coffee">Cà phê</button>
+          <button class="filter-btn" data-category="tea">Trà</button>
+          <button class="filter-btn" data-category="juice">Nước ép</button>
+          <button class="filter-btn" data-category="cake">Bánh ngọt</button>
+        </div>
+
+        <div class="row" id="menu-items">
+          <!-- Cà phê -->
+          <div class="col-lg-4 col-md-6 menu-item" data-category="coffee">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400"
+                class="card-img-top"
+                alt="Espresso"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Espresso</h5>
+                <p class="card-text">Đậm đà, thơm ngon - Pha máy Italy</p>
+                <div class="price">35,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="1"
+                  data-name="Espresso"
+                  data-price="35000"
+                  data-image="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 menu-item" data-category="coffee">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400"
+                class="card-img-top"
+                alt="Latte"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Latte</h5>
+                <p class="card-text">Cà phê sữa Ý - Hòa quyện tuyệt vời</p>
+                <div class="price">45,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="2"
+                  data-name="Latte"
+                  data-price="45000"
+                  data-image="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 menu-item" data-category="coffee">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400"
+                class="card-img-top"
+                alt="Cappuccino"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cappuccino</h5>
+                <p class="card-text">Bọt sữa mịn - Vị cà phê đậm đà</p>
+                <div class="price">40,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="3"
+                  data-name="Cappuccino"
+                  data-price="40000"
+                  data-image="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trà -->
+          <div class="col-lg-4 col-md-6 menu-item" data-category="tea">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400"
+                class="card-img-top"
+                alt="Trà Sữa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trà Sữa Trân Châu</h5>
+                <p class="card-text">Trà thơm - Sữa béo - Trân châu dai</p>
+                <div class="price">35,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="4"
+                  data-name="Trà Sữa Trân Châu"
+                  data-price="35000"
+                  data-image="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 menu-item" data-category="tea">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400"
+                class="card-img-top"
+                alt="Trà Đào"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trà Đào Cam Sả</h5>
+                <p class="card-text">Vị đào ngọt - Cam tươi - Sả thơm</p>
+                <div class="price">30,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="5"
+                  data-name="Trà Đào Cam Sả"
+                  data-price="30000"
+                  data-image="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nước ép -->
+          <div class="col-lg-4 col-md-6 menu-item" data-category="juice">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=400"
+                class="card-img-top"
+                alt="Nước Cam"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nước Cam Ép</h5>
+                <p class="card-text">Cam tươi nguyên chất - 100% tự nhiên</p>
+                <div class="price">25,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="6"
+                  data-name="Nước Cam Ép"
+                  data-price="25000"
+                  data-image="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bánh ngọt -->
+          <div class="col-lg-4 col-md-6 menu-item" data-category="cake">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+                class="card-img-top"
+                alt="Tiramisu"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Bánh Tiramisu</h5>
+                <p class="card-text">Ngọt ngào hương vị Ý - Phủ cacao</p>
+                <div class="price">55,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="7"
+                  data-name="Bánh Tiramisu"
+                  data-price="55000"
+                  data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 menu-item" data-category="cake">
+            <div class="card product-card">
+              <img
+                src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400"
+                class="card-img-top"
+                alt="Cheesecake"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cheesecake Dâu</h5>
+                <p class="card-text">Phô mai béo ngậy - Dâu tươi ngọt</p>
+                <div class="price">45,000 VND</div>
+                <button
+                  class="btn btn-add-cart"
+                  data-id="8"
+                  data-name="Cheesecake Dâu"
+                  data-price="45000"
+                  data-image="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400"
+                >
+                  <i class="fas fa-plus"></i> Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Đã thêm vào giỏ hàng</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

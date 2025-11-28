@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #8b4513;
+  --secondary-color: #d2691e;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+}
+
+body {
+  background: linear-gradient(-45deg, #8b4513, #d2691e, #a0522d, #cd853f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 800px;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.alert {
+  border-radius: 12px;
+  padding: 20px;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+  border-left: 4px solid var(--success-color);
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--danger-color);
+  border-left: 4px solid var(--danger-color);
+}
+
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--warning-color);
+  border-left: 4px solid var(--warning-color);
+}
+
+.alert i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.list-group-item {
+  border: none;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  color: var(--text-dark);
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item strong {
+  color: var(--primary-color);
+}
+
+.btn-success {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  border-radius: 12px;
+  padding: 12px 40px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  color: white;
+}

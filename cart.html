@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng - Coffee House</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
+            alt="Coffee House"
+            width="40"
+          />
+          Coffee House
+        </a>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i> Trang chủ
+          </a>
+          <a class="nav-link cart-icon" href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="cart-header">
+              <h1><i class="fas fa-shopping-cart"></i> Giỏ hàng của bạn</h1>
+              <span class="item-count" id="cart-item-count">0 sản phẩm</span>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+              <!-- Cart items will be loaded here by JavaScript -->
+              <div class="empty-cart" id="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Giỏ hàng trống</h3>
+                <p>Hãy thêm sản phẩm vào giỏ hàng</p>
+                <a href="index.html" class="btn btn-primary">Mua sắm ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cart-summary">
+              <h3>Thông tin đơn hàng</h3>
+
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span>Tạm tính:</span>
+                  <span id="subtotal">0 VND</span>
+                </div>
+                <div class="summary-row">
+                  <span>Phí vận chuyển:</span>
+                  <span id="shipping">0 VND</span>
+                </div>
+                <div class="summary-row">
+                  <span>Giảm giá:</span>
+                  <span id="discount">-0 VND</span>
+                </div>
+                <div class="summary-row total">
+                  <span><strong>Tổng cộng:</strong></span>
+                  <span><strong id="total">0 VND</strong></span>
+                </div>
+              </div>
+
+              <div class="promo-code">
+                <input
+                  type="text"
+                  id="promo-input"
+                  placeholder="Nhập mã giảm giá"
+                />
+                <button id="apply-promo" class="btn btn-outline">
+                  Áp dụng
+                </button>
+              </div>
+
+              <button id="checkout-btn" class="btn btn-checkout" disabled>
+                <i class="fas fa-lock"></i> Tiến hành thanh toán
+              </button>
+
+              <div class="continue-shopping">
+                <a href="index.html">
+                  <i class="fas fa-arrow-left"></i> Tiếp tục mua sắm
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

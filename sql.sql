@@ -4,6 +4,7 @@ DROP TRIGGER IF EXISTS trg_UpdateOrderStatus;
 DROP PROCEDURE IF EXISTS sp_CreatePayment;
 DROP PROCEDURE IF EXISTS sp_UpdatePaymentStatus;
 
+
 -- Xóa bảng theo thứ tự (MySQL tự xử lý FK nếu có ON DELETE CASCADE hoặc tạm thời tắt foreign key checks)
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS Payments;

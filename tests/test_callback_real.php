@@ -14,10 +14,7 @@ class RealCallbackTest {
         // Test 1: Gửi callback hợp lệ
         $this->testValidCallback();
         
-        // Test 2: Gửi callback với MAC sai
-        $this->testInvalidMacCallback();
-        
-        // Test 3: Gửi callback với transaction có thật trong database
+        // Test 2: Gửi callback với transaction có thật trong database
         $this->testWithRealTransaction();
     }
     

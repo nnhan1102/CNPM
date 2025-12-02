@@ -1,7 +1,7 @@
 <?php
 /**
  * TEST CALLBACK THẬT - Gửi request trực tiếp đến callback.php
- * Cách sử dụng: php test_callback_real.php
+ * Cách sử dụng: php tests/test_callback_real.php
  */
 
 class RealCallbackTest {
@@ -13,7 +13,6 @@ class RealCallbackTest {
         
         // Test 1: Gửi callback hợp lệ
         $this->testValidCallback();
-        
         // Test 2: Gửi callback với transaction có thật trong database
         $this->testWithRealTransaction();
     }

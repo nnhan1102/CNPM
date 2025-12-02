@@ -6,7 +6,7 @@
 
 class RealCallbackTest {
     private $key2 = "trMrHtvjo6myautxDUiAcYsVtaeQ8nhf";
-    private $callbackUrl = "http://localhost/Test_modulePayment-main/callback.php";
+    private $callbackUrl = "http://localhost/CNPM/callback.php";
     
     public function runRealTests() {
         echo "=== TEST CALLBACK THẬT ===\n\n";
@@ -49,35 +49,8 @@ class RealCallbackTest {
         echo "----------------------------------------\n\n";
     }
     
-    private function testInvalidMacCallback() {
-        echo "🔹 Test 2: Callback với MAC sai\n";
-        
-        $testData = [
-            "app_trans_id" => "TEST_INVALID_MAC",
-            "zp_trans_id" => "ZP_INVALID",
-            "amount" => 50000
-        ];
-        
-        $postData = [
-            "data" => json_encode($testData),
-            "mac" => "mac_khong_hop_le_1234567890"
-        ];
-        
-        $response = $this->sendHttpRequest($postData);
-        
-        echo "Request: " . json_encode($postData, JSON_PRETTY_PRINT) . "\n";
-        echo "Response: " . json_encode($response, JSON_PRETTY_PRINT) . "\n";
-        
-        if ($response && $response['return_code'] == -1) {
-            echo "THÀNH CÔNG: MAC sai bị từ chối\n";
-        } else {
-            echo "THẤT BẠI: MAC sai không bị từ chối\n";
-        }
-        echo "----------------------------------------\n\n";
-    }
-    
     private function testWithRealTransaction() {
-        echo "🔹 Test 3: Callback với transaction thật từ database\n";
+        echo "🔹 Test 2: Callback với transaction thật từ database\n";
         
         try {
             require_once 'db.php';

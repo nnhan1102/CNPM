@@ -8,7 +8,7 @@ class Database {
                 $host = 'localhost';
                 $db   = 'paymentdb';
                 $user = 'root';
-                $pass = '12345678';
+                $pass = '050705';
                 $charset = 'utf8mb4';
 
                 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

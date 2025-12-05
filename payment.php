@@ -9,7 +9,7 @@ $config = [
     "endpoint" => "https://sb-openapi.zalopay.vn/v2/create"
 ];
 
-$embeddata = json_encode(["redirecturl" => "http://localhost/Test_modulePayment-main/redirect.php"]);
+$embeddata = json_encode(["redirecturl" => "https://unswilled-shantel-domiciliary.ngrok-free.dev/CNPM/redirect.php"]);
 
 $items = '[]';
 $transID = rand(0,1000000);
@@ -52,7 +52,7 @@ $order = [
     "amount" => $amount,
     "description" => $description,
     "bank_code" => "",
-    "callback_url" => "http://localhost/Test_modulePayment-main/callback.php",
+    "callback_url" => "https://unswilled-shantel-domiciliary.ngrok-free.dev/CNPM/callback.php",
 ];
 
 try {

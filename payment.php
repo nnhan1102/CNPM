@@ -52,7 +52,7 @@ $order = [
     "amount" => $amount,
     "description" => $description,
     "bank_code" => "",
-    "callback_url" => "https://noninert-muscular-tinley.ngrok-free.dev/CNPM/callback.php",
+    "callback_url" => "http://localhost/Test_modulePayment-main/callback.php",
 ];
 
 try {

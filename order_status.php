@@ -14,7 +14,7 @@ if(isset($_GET["app_trans_id"]))
 
 	try {
 		$db = Database::getConnection();
-		$stmt = $db->prepare("SELECT * FROM Payments WHERE TransactionCode = ?");
+		$stmt = $db->prepare("SELECT * FROM vw_PaymentDetails WHERE TransactionCode = ?");
         $stmt->execute([$app_trans_id]);
         $payment = $stmt->fetch(PDO::FETCH_ASSOC);
 		if ($payment) {

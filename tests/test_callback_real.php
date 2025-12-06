@@ -5,7 +5,7 @@
 
 class FixedCallbackTest {
     private $key2 = "trMrHtvjo6myautxDUiAcYsVtaeQ8nhf";
-    private $callbackUrl = "http://localhost/CNPM/callback.php";
+    private $callbackUrl = "https://noninert-muscular-tinley.ngrok-free.dev/CNPM/callback.php";
     private $db;
     
     public function __construct() {

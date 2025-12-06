@@ -15,8 +15,8 @@ if(isset($_GET["app_trans_id"]))
 	try {
 		$db = Database::getConnection();
 		$stmt = $db->prepare("SELECT * FROM Payments WHERE TransactionCode = ?");
-		$stmt->execute([$app_trans_id]);
-		$payment = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute([$app_trans_id]);
+        $payment = $stmt->fetch(PDO::FETCH_ASSOC);
 		if ($payment) {
 			echo "<h3>Thông tin từ database:</h3>";
 			foreach ($payment as $key => $value) {

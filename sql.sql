@@ -127,7 +127,3 @@ END $$
 
 DELIMITER ;
 
-
-
-
---nhan ay chia

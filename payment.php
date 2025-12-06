@@ -9,7 +9,7 @@ $config = [
     "endpoint" => "https://sb-openapi.zalopay.vn/v2/create"
 ];
 
-$embeddata = json_encode(["redirecturl" => "http://localhost/Test_modulePayment-main/redirect.php"]);
+$embeddata = json_encode(["redirecturl" => "https://noninert-muscular-tinley.ngrok-free.dev/CNPM/redirect.php"]);
 
 $items = '[]';
 $transID = rand(0,1000000);
@@ -52,12 +52,12 @@ $order = [
     "amount" => $amount,
     "description" => $description,
     "bank_code" => "",
-    "callback_url" => "http://localhost/Test_modulePayment-main/callback.php",
+    "callback_url" => "https://noninert-muscular-tinley.ngrok-free.dev/CNPM/callback.php",
 ];
 
 try {
     // Insert into Payments
-    $stmt2 = $db->prepare("INSERT INTO Payments (OrderID, Amount, MethodID, TransactionCode, Currency) VALUES (?, ?, 1, ?, 'VND')");
+    $stmt2 = $db->prepare("CALL sp_CreatePayment(?, ?, 1, ?)");
     $stmt2->execute([$orderId, $order["amount"], $order["app_trans_id"]]);
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());

@@ -1,119 +1,334 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giỏ hàng - Coffee House</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="cart.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
-            alt="Coffee House"
-            width="40"
-          />
-          Coffee House
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giỏ hàng - Coffee House</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee House" width="40" />
+        Coffee House
+      </a>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-home"></i> Trang chủ
         </a>
-        <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-home"></i> Trang chủ
-          </a>
-          <a class="nav-link cart-icon" href="cart.html">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
-          </a>
-        </div>
+        <a class="nav-link cart-icon" href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Cart Section -->
-    <section class="cart-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="cart-header">
-              <h1><i class="fas fa-shopping-cart"></i> Giỏ hàng của bạn</h1>
-              <span class="item-count" id="cart-item-count">0 sản phẩm</span>
-            </div>
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <div class="row">
+        <!-- Left Column - Cart Items -->
+        <div class="col-lg-8">
+          <div class="cart-header">
+            <h1><i class="fas fa-shopping-cart"></i> Giỏ hàng của bạn</h1>
+            <span class="item-count" id="cart-item-count">0 sản phẩm</span>
+          </div>
 
+          <!-- Cart Items Container -->
+          <div class="cart-items-container">
             <div class="cart-items" id="cart-items">
               <!-- Cart items will be loaded here by JavaScript -->
               <div class="empty-cart" id="empty-cart">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart fa-4x"></i>
                 <h3>Giỏ hàng trống</h3>
                 <p>Hãy thêm sản phẩm vào giỏ hàng</p>
-                <a href="index.html" class="btn btn-primary">Mua sắm ngay</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="cart-summary">
-              <h3>Thông tin đơn hàng</h3>
-
-              <div class="summary-details">
-                <div class="summary-row">
-                  <span>Tạm tính:</span>
-                  <span id="subtotal">0 VND</span>
-                </div>
-                <div class="summary-row">
-                  <span>Phí vận chuyển:</span>
-                  <span id="shipping">0 VND</span>
-                </div>
-                <div class="summary-row">
-                  <span>Giảm giá:</span>
-                  <span id="discount">-0 VND</span>
-                </div>
-                <div class="summary-row total">
-                  <span><strong>Tổng cộng:</strong></span>
-                  <span><strong id="total">0 VND</strong></span>
-                </div>
-              </div>
-
-              <div class="promo-code">
-                <input
-                  type="text"
-                  id="promo-input"
-                  placeholder="Nhập mã giảm giá"
-                />
-                <button id="apply-promo" class="btn btn-outline">
-                  Áp dụng
-                </button>
-              </div>
-
-              <button id="checkout-btn" class="btn btn-checkout" disabled>
-                <i class="fas fa-lock"></i> Tiến hành thanh toán
-              </button>
-
-              <div class="continue-shopping">
-                <a href="index.html">
-                  <i class="fas fa-arrow-left"></i> Tiếp tục mua sắm
+                <a href="index.html" class="btn btn-primary btn-lg mt-3">
+                  <i class="fas fa-shopping-bag"></i> Mua sắm ngay
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <script src="script.js"></script>
-    <script src="cart.js"></script>
-  </body>
+        <!-- Right Column - Order Summary -->
+        <div class="col-lg-4">
+          <div class="cart-summary">
+            <h3><i class="fas fa-receipt"></i> Thông tin đơn hàng</h3>
+
+            <!-- Order Details -->
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Tạm tính:</span>
+                <span id="subtotal">0 VND</span>
+              </div>
+              <div class="summary-row">
+                <span>Phí vận chuyển:</span>
+                <span id="shipping">0 VND</span>
+              </div>
+              <div class="summary-row total">
+                <span><strong>Tổng cộng:</strong></span>
+                <span><strong id="total">0 VND</strong></span>
+              </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <button id="checkout-btn" class="btn btn-checkout">
+              <i class="fas fa-lock"></i> Tiến hành thanh toán
+            </button>
+
+            <!-- Continue Shopping -->
+            <div class="continue-shopping text-center mt-4">
+              <a href="index.html" class="text-decoration-none">
+                <i class="fas fa-arrow-left mr-2"></i>
+                <span class="font-weight-bold">Tiếp tục mua sắm</span>
+              </a>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="additional-info mt-4 pt-4 border-top">
+              <div class="info-item">
+                <i class="fas fa-shipping-fast text-primary mr-2"></i>
+                <span class="text-muted">Miễn phí vận chuyển cho đơn trên 150,000 VND</span>
+              </div>
+              <div class="info-item mt-2">
+                <i class="fas fa-shield-alt text-primary mr-2"></i>
+                <span class="text-muted">Thanh toán an toàn với ZaloPay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle"></i>
+      <span id="toast-message">Đã thêm vào giỏ hàng</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Cart Manager Class - ĐẶT TRỰC TIẾP TRONG HTML ĐỂ TRÁNH LỖI
+    class CartManager {
+      constructor() {
+        this.cart = JSON.parse(localStorage.getItem("cart")) || [];
+        this.init();
+      }
+
+      init() {
+        this.renderCart();
+        this.attachEventListeners();
+        this.updateCartSummary();
+        this.updateHeaderCartCount();
+      }
+
+      renderCart() {
+        const cartItemsContainer = document.getElementById("cart-items");
+        const emptyCart = document.getElementById("empty-cart");
+        const cartItemCount = document.getElementById("cart-item-count");
+
+        if (this.cart.length === 0) {
+          cartItemsContainer.innerHTML = "";
+          cartItemsContainer.appendChild(emptyCart);
+          emptyCart.style.display = "block";
+          cartItemCount.textContent = "0 sản phẩm";
+
+          // Disable checkout button when cart is empty
+          document.getElementById("checkout-btn").disabled = true;
+          document.getElementById("checkout-btn").style.opacity = "0.7";
+          return;
+        }
+
+        emptyCart.style.display = "none";
+        cartItemCount.textContent = `${this.cart.length} sản phẩm`;
+
+        // Enable checkout button
+        document.getElementById("checkout-btn").disabled = false;
+        document.getElementById("checkout-btn").style.opacity = "1";
+
+        cartItemsContainer.innerHTML = this.cart
+          .map(
+            (item) => `
+                  <div class="cart-item" data-id="${item.id}">
+                      <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                      <div class="cart-item-details">
+                          <div class="cart-item-name">${item.name}</div>
+                          <div class="cart-item-price">${this.formatPrice(item.price)} VND</div>
+                      </div>
+                      <div class="cart-item-controls">
+                          <div class="quantity-controls">
+                              <button class="quantity-btn decrease" data-id="${item.id}">
+                                  <i class="fas fa-minus"></i>
+                              </button>
+                              <span class="quantity">${item.quantity}</span>
+                              <button class="quantity-btn increase" data-id="${item.id}">
+                                  <i class="fas fa-plus"></i>
+                              </button>
+                          </div>
+                          <button class="remove-btn" data-id="${item.id}">
+                              <i class="fas fa-trash"></i> Xóa
+                          </button>
+                      </div>
+                  </div>
+              `
+          )
+          .join("");
+      }
+
+      updateCartSummary() {
+        const subtotal = this.cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        );
+        const shipping = subtotal > 0 ? 15000 : 0;
+        const total = subtotal + shipping;
+
+        document.getElementById("subtotal").textContent =
+          this.formatPrice(subtotal) + " VND";
+        document.getElementById("shipping").textContent =
+          this.formatPrice(shipping) + " VND";
+        document.getElementById("total").textContent =
+          this.formatPrice(total) + " VND";
+      }
+
+      updateQuantity(productId, change) {
+        const item = this.cart.find((item) => item.id === productId);
+        if (item) {
+          item.quantity += change;
+
+          if (item.quantity <= 0) {
+            this.removeFromCart(productId);
+          } else {
+            this.saveCart();
+            this.renderCart();
+            this.updateCartSummary();
+            this.updateHeaderCartCount();
+          }
+        }
+      }
+
+      removeFromCart(productId) {
+        this.cart = this.cart.filter((item) => item.id !== productId);
+        this.saveCart();
+        this.renderCart();
+        this.updateCartSummary();
+        this.updateHeaderCartCount();
+      }
+
+      saveCart() {
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
+
+      updateHeaderCartCount() {
+        const totalItems = this.cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.querySelector(".cart-count").textContent = totalItems;
+      }
+
+      formatPrice(price) {
+        return new Intl.NumberFormat("vi-VN").format(price);
+      }
+
+      attachEventListeners() {
+        // Quantity controls
+        document.addEventListener("click", (e) => {
+          if (e.target.closest(".increase")) {
+            const productId = e.target.closest(".increase").dataset.id;
+            this.updateQuantity(productId, 1);
+          }
+
+          if (e.target.closest(".decrease")) {
+            const productId = e.target.closest(".decrease").dataset.id;
+            this.updateQuantity(productId, -1);
+          }
+
+          if (e.target.closest(".remove-btn")) {
+            const productId = e.target.closest(".remove-btn").dataset.id;
+            if (confirm("Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?")) {
+              this.removeFromCart(productId);
+            }
+          }
+        });
+
+        // Checkout button
+        const checkoutBtn = document.getElementById("checkout-btn");
+        checkoutBtn.addEventListener("click", (e) => {
+          if (this.cart.length === 0) {
+            e.preventDefault();
+            alert("Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.");
+            return;
+          }
+          this.proceedToCheckout();
+        });
+      }
+
+      proceedToCheckout() {
+        if (this.cart.length === 0) {
+          alert("Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.");
+          return;
+        }
+
+        // Prepare order data
+        const orderData = {
+          items: this.cart,
+          subtotal: this.cart.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0
+          ),
+          shipping: 15000,
+          total:
+            this.cart.reduce((sum, item) => sum + item.price * item.quantity, 0) +
+            15000,
+          description: this.generateOrderDescription(),
+        };
+
+        // Redirect to checkout page with order data
+        const queryString = new URLSearchParams({
+          items: JSON.stringify(orderData.items),
+          total: orderData.total,
+          description: orderData.description,
+        }).toString();
+
+        console.log("Redirecting to checkout with data:", orderData);
+        window.location.href = `checkout.php?${queryString}`;
+      }
+
+      generateOrderDescription() {
+        const items = this.cart
+          .map((item) => `${item.name} x${item.quantity}`)
+          .join(", ");
+        return `Đơn hàng Coffee House - ${items}`;
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("Initializing CartManager...");
+      const cartManager = new CartManager();
+
+      // Debug: Log cart contents
+      console.log("Cart contents:", cartManager.cart);
+
+      // Test: Manually enable checkout if cart has items
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length > 0) {
+        document.getElementById("checkout-btn").disabled = false;
+        document.getElementById("checkout-btn").style.opacity = "1";
+      }
+    });
+  </script>
+</body>
+
 </html>
